@@ -1,1 +1,335 @@
 
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{sslab_ctrl_rinko}
+\usepackage[dvips]{graphicx}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\usepackage{plext}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{ascmac}
+\usepackage{mathrsfs}
+\usepackage{bm}
+
+
+% \usepackage{cite}
+
+\allowdisplaybreaks
+
+\title{title}
+
+\begin{document}
+\leftline{名前：韓心又}
+\leftline{学生番号：1751204}
+
+\section{本日のスライドの空白を埋め、理由も付記せよ。}
+問1
+$\\\because\ddot{y} =u, y(0)=0, \dot{y} (0)=0\\
+\therefore y=0.5t^2$\\
+\\$(s\bm{I}-\bm{A})^{-1}=
+\begin{bmatrix}
+s^{-1} & s^{-2}\\
+0 & s^{-1}
+\end{bmatrix}\\$
+$\because\mathscr{L} ^{-1}[s^{-1}]=1,\mathscr{L} ^{-1}[s^{-2}]=t\\$
+$\therefore e^{\bm{A}t}=
+\begin{bmatrix}
+1 & t\\
+0 & 1
+\end{bmatrix}
+\Rightarrow \bm{A}_\Delta=e^{\bm{A}\Delta}=
+\begin{bmatrix}
+1 & \Delta\\
+0 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0.1\\
+0 & 1
+\end{bmatrix}\\$
+$\bm{b}_\Delta=\int_0^\Delta e^{\bm{A}\tau}\bm{b}\intd\tau =
+\begin{bmatrix}
+0.5\Delta^2\\
+\Delta
+\end{bmatrix}\\$
+\\
+\\$y[k]=
+\begin{bmatrix}
+1 & 0
+\end{bmatrix}
+\sum\nolimits_{\tau=0}^{k-1} 
+\begin{bmatrix}
+0.5+(k-1-\tau)\Delta^2\\
+\Delta
+\end{bmatrix}\\
+=\cdots\\
+=0.5k^2\Delta^2=0.005k^2$
+\\
+\\
+問2 (2)\\
+固有ベクトルは
+$\\\bm{v}_1=
+\begin{bmatrix}
+1\\
+-1
+\end{bmatrix},
+\bm{v}_2=
+\begin{bmatrix}
+1\\
+1
+\end{bmatrix}$\\
+$\therefore$対角変換行列は
+$\\\bm{T}=
+\begin{bmatrix}
+1 & 1\\
+-1 & 1
+\end{bmatrix}$
+\\
+$\therefore\bm{A}_\Delta^k=\left(\bm{T}
+\begin{bmatrix}
+0 & 0\\
+0 & 2
+\end{bmatrix}
+\bm{T}^{-1}\right)^k=2^{k-1}
+\begin{bmatrix}
+1 & 1\\
+1 & 1
+\end{bmatrix}$
+
+$\\\bm{x}[k]=2^{k-1}
+\begin{bmatrix}
+1 & 1\\
+1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\alpha\\
+\beta
+\end{bmatrix}=2^{k-1}
+\begin{bmatrix}
+\alpha+\beta\\
+\alpha+\beta
+\end{bmatrix}$
+\\
+\\
+\\
+問3 (1)
+$\\e^{\bm{A}t}=
+\begin{bmatrix}
+1 & 1\\
+3j & -3j
+\end{bmatrix}
+\begin{bmatrix}
+e^{3jt} & 0\\
+0 & e^{-3jt}
+\end{bmatrix}
+\begin{bmatrix}
+1 & 1\\
+3j & -3j
+\end{bmatrix}^{-1}$
+$\\=
+\begin{bmatrix}
+1 & 1\\
+3j & -3j
+\end{bmatrix}
+\begin{bmatrix}
+\mathrm{cos}3t+j\mathrm{sin}3t & 0\\
+0 & \mathrm{cos}3t-j\mathrm{sin}3t
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{2} & -\frac{1}{6}j\\
+\frac{1}{2} & \frac{1}{6}j
+\end{bmatrix}$
+$\\=
+\begin{bmatrix}
+\mathrm{cos}3t & \frac{1}{3}\mathrm{sin}3t\\
+-3\mathrm{sin}3t & \mathrm{cos}3t
+\end{bmatrix}$
+$\\\because \bm{x}(0)=
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}$
+$\\\therefore e^{\bm{A}t}\bm{x}(0)=
+\begin{bmatrix}
+\mathrm{cos}3t\\
+-3\mathrm{sin}3t
+\end{bmatrix}$
+\\
+\\
+(2)
+$\\\because \lambda^2+k_2\lambda+9+k_1=\lambda^2+2\lambda+5$
+$\\\therefore k_1=-4, k=2=2$
+\\
+\\
+\\
+スライド13
+$\\\Omega=\frac{100}{501}
+\begin{bmatrix}
+\frac{401}{501} & -\frac{200}{501}\\
+-\frac{200}{501} & \frac{101}{501}
+\end{bmatrix}$
+\\
+\\
+\\
+スライド14
+$\begin{bmatrix}
+1.01 & 2\\
+2 & 4.01
+\end{bmatrix}
+\frac{100}{501}
+\begin{bmatrix}
+\frac{401}{501} & -\frac{200}{501}\\
+-\frac{200}{501} & \frac{101}{501}
+\end{bmatrix}$
+$\\=\frac{1}{501}
+\begin{bmatrix}
+101 & 200\\
+200 & 401
+\end{bmatrix}
+\begin{bmatrix}
+\frac{401}{501} & -\frac{200}{501}\\
+-\frac{200}{501} & \frac{101}{501}
+\end{bmatrix}$
+\\
+\\
+\\
+スライド15
+$\\\left(\bm{\Omega}+\bm{\xi\xi}^T\right)^{-1}=\cdots=\frac{1}{15}
+\begin{bmatrix}
+14 & -2 & -3\\
+-2 & 11 & -6\\
+-3 & -6 & 6\\
+\end{bmatrix}$
+
+$\\\frac{\bm{\Omega}^{-1}\bm{\xi\xi}^T\bm{\Omega}^{-1}}{1+\bm{\xi}^T\bm{\Omega}^{-1}\bm{\xi}}=\frac{1}{15}
+\begin{bmatrix}
+1 & 2 & 3\\
+2 & 4 & 6\\
+3 & 6 & 9
+\end{bmatrix}$
+
+$\\
+\begin{bmatrix}
+2 & 2 & 3\\
+2 & 5 & 6\\
+3 & 6 & 10
+\end{bmatrix}
+\frac{1}{15}
+\begin{bmatrix}
+14 & 13 & 12\\
+13 & 11 & 9\\
+12 & 9 & 6\\
+\end{bmatrix}=\bm{I}_3$
+\\
+\\
+\\
+スライド19
+$\\\bm{\dot{x}}=
+\begin{bmatrix}
+-\frac{R}{L} & 0 & -K_e\\
+0 & 0 & 1\\
+\frac{K_\tau}{JL} & 0 & -\frac{D}{J}
+\end{bmatrix}\bm{x}+
+\begin{bmatrix}
+1\\
+0\\
+0\\
+\end{bmatrix}u$
+$K_e=0$にすれば、行列$\bm{A}$は
+$\\
+\begin{bmatrix}
+-\frac{R}{L} & 0 & 0\\
+0 & 0 & 1\\
+\frac{K_\tau}{JL} & 0 & -\frac{D}{J}
+\end{bmatrix}$
+$\\\therefore \left(s\bm{I}-\bm{A}\right)=
+\begin{bmatrix}
+s+\frac{R}{L} & 0 & 0\\
+0 & s & -1\\
+-\frac{K_\tau}{JL} & 0 & s+\frac{D}{J}
+\end{bmatrix}$
+\\
+方程式
+$\\\left(s\bm{I}-\bm{A}\right)
+\begin{bmatrix}
+\alpha(s)\\
+\beta(s)\\
+\gamma(s)
+\end{bmatrix}=
+\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}$
+\\
+から
+$\\\alpha(s)=\frac{L}{Ls+R}
+\\\beta(s)=\frac{K_\tau}{LJs^3+(LD+JR)s^2+RDs}
+\\\gamma(s)=\frac{K_\tau}{LJs^2+(LD+JR)s+RD}$
+\\
+がわかる
+$\\\therefore G(s)=(0\quad 1\quad 0)
+\begin{bmatrix}
+\alpha(s)\\
+\beta(s)\\
+\gamma(s)
+\end{bmatrix}=\frac{K_\tau}{LJs^3+(LD+JR)s^2+RDs}$
+\newpage
+\section{システム分析}
+$\bm{\dot{x}}=\bm{Ax}+\bm{b}u,$
+$\\y=\bm{cx}$
+\\
+$\\A=
+\begin{bmatrix}
+0 & 1\\
+-4 & 0
+\end{bmatrix},b=
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix},c=
+\begin{bmatrix}
+1 & 0
+\end{bmatrix}$
+$\\e^{\bm{A}t}=\mathscr{L}^{-1}\left[\left(s\bm{I}-\bm{A}\right)^{-1}\right]$
+$\\\left(s\bm{I}-\bm{A}\right)^{-1}=\frac{1}{s^2+4}
+\begin{bmatrix}
+s & 1\\
+-4 & s
+\end{bmatrix}$
+$\\\therefore e^{\bm{A}t}=
+\begin{bmatrix}
+\mathrm{cos}2t & 0.5\mathrm{sin}2t\\
+2\mathrm{sin}2t & \mathrm{cos}2t
+\end{bmatrix}$
+\\
+\\
+$\Delta=0.1$、離散システムにすれば
+$\\\bm{A}_\Delta=
+\begin{bmatrix}
+\mathrm{cos}0.2 & 0.5\mathrm{sin}0.2\\
+2\mathrm{sin}0.2 & \mathrm{cos}0.2
+\end{bmatrix}$
+$\\\bm{b}_\Delta=
+\begin{bmatrix}
+0.25-0.25\mathrm{cos}0.2\\
+0.5\mathrm{sin}0.2
+\end{bmatrix}$
+\\
+\\
+$\bm{A}$の固有値について
+$\\|\lambda\bm{I}-\bm{A}|=
+\begin{vmatrix}
+\lambda-\mathrm{cos}0.2 & -0.5\mathrm{sin}0.2\\
+2\mathrm{sin}0.2 & \lambda-\mathrm{cos}0.2
+\end{vmatrix}=\left(\lambda-\mathrm{cos}0.2\right)^2-\mathrm{sin}^20.2=0$
+\\
+$\Rightarrow \lambda^2-2\lambda\mathrm{cos}0.2+1=0$
+$\\\lambda=\mathrm{cos}0.2\pm j\mathrm{sin}0.2$
+$\\\because |\lambda|=1$
+$\\\therefore$このシステムは漸近安定でありません。
+
+
+\end{document}
