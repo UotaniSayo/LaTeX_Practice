@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{sslab_ctrl_rinko}
+\usepackage[dvips]{graphicx}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\usepackage{plext}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{ascmac}
+\usepackage{mathrsfs}
+\usepackage{bm}
+
+
+% \usepackage{cite}
+
+\allowdisplaybreaks
+
+\title{title}
+\begin{document}
+
+\section*{Problem 5.5}
+Show that the negative-feedback system shown in Fig.2.5(b) is BIBO stable if and only if the gain $a$ has a magnitude less than 1. For $a=1$, find a bounded input $r(t)$ that will excite an unbounded output.
+\begin{figure}[htbp]
+\centering
+    \includegraphics[bb=0pt 0pt 1074pt 340pt,scale=0.3]{./pfb.png}
+    \caption{Fig.2.5(b)}
+    \label{fig:2.5(b)}
+\end{figure}
+
+\section*{Problem 5.10}
+Is the homogeneous state equation
+\begin{center}
+$\bm{\dot{x}}=
+\begin{bmatrix}
+-1 & 0 & 1\\
+ 0 & 0 & 0\\
+ 0 & 0 & 0
+\end{bmatrix}
+\bm{x}$
+\end{center}
+marginally stable? Asymptotically stable?
+
+\section*{Problem 5.13}
+Is the discrete-time homogeneous state equation
+\begin{center}
+$\bm{x}[k+1]=
+\begin{bmatrix}
+0.9 & 0 & 1\\
+  0 & 1 & 1\\
+  0 & 0 & 1
+\end{bmatrix}
+\bm{x}[k]$
+\end{center}
+marginally stable? Asymptotically stable?
+
+\section*{Problem 5.22}
+Show that the equation in Problem 5.21
+\begin{center}
+$\dot{x}=2tx+u$ \hspace{18pt} $y=e^{-t^2}x$
+\end{center}
+can be transformed by using $\bar{x}=P(t)x$, with $P(t)=e^{-t^2}$,into
+\begin{center}
+$\dot{\bar{x}}=0\cdot\bar{x}+e^{-t^2}u$ \hspace{18pt} $y=\bar{x}$
+\end{center}
+Is the equation BIBO stable? Marginally stable? Asymptotically stable? Is the transformation a Lyapunov transformation?
+
+\section*{Problem 5.23}
+Is the homogeneous equation
+\begin{center}
+$\bm{\dot{x}}=
+\begin{bmatrix}
+-1 & 0\\
+-e^{-3t} & 0
+\end{bmatrix}
+\bm{x}$
+\end{center}
+for $t_0\geq0$, marginally stable? Asymtotically stable?
+
+\end{document}
