@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper,fleqn]{article}
+
+\paperwidth 597pt
+\paperheight 845pt
+\voffset -10pt
+\hoffset 15pt
+\topmargin -3pt
+\headheight 0pt
+\headsep 0pt
+\topskip 0pt
+\oddsidemargin -10pt
+\evensidemargin 10pt
+\textwidth 460pt
+\textheight 710pt
+\footskip 20pt
+\marginparsep 10pt
+\marginparwidth 20pt
+\marginparpush 5pt
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+
+% \usepackage{cite}
+
+\allowdisplaybreaks
+\begin{document}
+\large
+\begin{align*}
+& x^2+2\sqrt{3}xy-y^2=3 \\
+& \Rightarrow (x+\sqrt{3}y)^2-4y^2=3 \\
+& {\mathrm{Let}}\; \begin{cases}
+	u=x+\sqrt{3}y \\
+	v=2y
+	\end{cases} \\
+& {\mathrm{Then}}\; u^2-v^2=3 \tag{1} \\
+& x^2+y^2=(u-\frac{\sqrt{3}}{2}v)^2+\frac{1}{4}v^2=u^2-\sqrt{3}uv+v^2 \tag{2}
+\end{align*}
+
+Transform Eq.(1) into parametric equations:
+\begin{equation*}
+\begin{cases}
+	u=\sqrt{3}\,{\mathrm{sec}}\,t \\
+	v=\sqrt{3}\,{\mathrm{tan}}\,t
+\end{cases}
+\end{equation*}
+
+Eq.(2) becomes: \\
+\begin{align*}
+& \frac{3}{{\mathrm{cos}}^2t}-\frac{3\sqrt{3}\,{\mathrm{sin}}\,t}{{\mathrm{cos}}^2t}+\frac{3\,{\mathrm{sin}}^2t}{{\mathrm{cos}}^2t} \\
+& =\frac{3-3\sqrt{3}\,{\mathrm{sin}}\,t+3\,{\mathrm{sin}}^2t}{1-{\mathrm{sin}}\,2t} \tag{3}
+\end{align*}
+
+Let $q={\mathrm{sin}}\,t$, Eq.(3)\; becomes:
+\begin{align*}
+& f(q)=\frac{3-3\sqrt{3}q+3q^2}{1-q^2} \\
+& f'(q)=\frac{-3\sqrt{3}q^2+12q-3\sqrt{3}}{(1-q^2)^2}
+\end{align*}
+
+For numerator:
+\begin{equation*}
+\frac{12}{6\sqrt{3}}>1 \\
+\end{equation*}
+
+Roots of the numerator are $q_1=\frac{1}{\sqrt{3}}<1$, $q_2=\sqrt{3}>1$
+
+Thus $f(q)$ decreases at $(-1,\frac{1}{\sqrt{3}}]$, increases at $(\frac{1}{\sqrt{3}},1)$
+
+The minimum of $f(q)$, or $x^2+y^2$ is $f(\frac{1}{\sqrt{3}})=\frac{3}{2}$
+	
+\end{document}
